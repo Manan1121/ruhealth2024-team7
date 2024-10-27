@@ -21,7 +21,7 @@ export default function Analysis() {
 
       <div className="bg-blue-100 w-full max-w-2xl h-64 mt-6 p-4 rounded-lg shadow-lg flex items-center justify-center">
         {output ? (
-          <p className="text-blue-800">{output}</p>
+          <pre className="text-blue-800">{JSON.stringify(output, null, 2)}</pre>
         ) : (
           <p className="text-blue-500">No results yet</p>
         )}
