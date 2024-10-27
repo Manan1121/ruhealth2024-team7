@@ -20,79 +20,87 @@ export default function Signup() {
   };
 
   return (
-    <div className="flex flex-col items-center justify-center min-h-screen bg-gray-100 text-black">
-      <h2 className="text-3xl font-bold mb-6 text-blue-800">Sign Up</h2>
+<div
+  className="flex items-center justify-center min-h-screen px-4 sm:px-0"
+  style={{
+    background: `radial-gradient(circle, rgba(173,216,230,1) 0%, rgba(210,210,210,1) 50%, rgba(0,0,139,1) 100%)`,
+  }}
+>
+      <div className="bg-white shadow-xl rounded-2xl p-8 w-full max-w-lg border-t-4 border-blue-600">
+        <h2 className="text-4xl font-extrabold mb-8 text-blue-800 text-center">
+          Create Your Account
+        </h2>
 
-      <form
-        onSubmit={handleSignup}
-        className="bg-white shadow-lg rounded-lg p-6 w-full max-w-md border border-blue-200"
-      >
-        <div className="mb-4">
-          <label
-            className="block text-blue-700 font-semibold mb-2"
-            htmlFor="username"
+        <form onSubmit={handleSignup} className="space-y-6">
+          <div>
+            <label
+              className="block text-lg font-semibold text-blue-700 mb-2"
+              htmlFor="username"
+            >
+              Username
+            </label>
+            <input
+              type="text"
+              id="username"
+              value={username}
+              onChange={(e) => setUsername(e.target.value)}
+              className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-400 focus:outline-none transition"
+              placeholder="Enter your username"
+              required
+            />
+          </div>
+
+          <div>
+            <label
+              className="block text-lg font-semibold text-blue-700 mb-2"
+              htmlFor="email"
+            >
+              Email
+            </label>
+            <input
+              type="email"
+              id="email"
+              value={email}
+              onChange={(e) => setEmail(e.target.value)}
+              className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-400 focus:outline-none transition"
+              placeholder="Enter your email"
+              required
+            />
+          </div>
+
+          <div>
+            <label
+              className="block text-lg font-semibold text-blue-700 mb-2"
+              htmlFor="password"
+            >
+              Password
+            </label>
+            <input
+              type="password"
+              id="password"
+              value={password}
+              onChange={(e) => setPassword(e.target.value)}
+              className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-400 focus:outline-none transition"
+              placeholder="Enter your password"
+              required
+            />
+          </div>
+
+          <button
+            type="submit"
+            className="w-full bg-blue-600 text-white py-3 rounded-lg hover:bg-blue-700 focus:ring-2 focus:ring-blue-400 transition text-lg font-semibold"
           >
-            Username
-          </label>
-          <input
-            type="text"
-            id="username"
-            value={username}
-            onChange={(e) => setUsername(e.target.value)}
-            className="w-full px-4 py-2 border rounded-md focus:outline-none focus:border-blue-500"
-            placeholder="Enter your username"
-            required
-          />
-        </div>
+            Sign Up
+          </button>
+        </form>
 
-        <div className="mb-4">
-          <label
-            className="block text-blue-700 font-semibold mb-2"
-            htmlFor="email"
-          >
-            Email
-          </label>
-          <input
-            type="email"
-            id="email"
-            value={email}
-            onChange={(e) => setEmail(e.target.value)}
-            className="w-full px-4 py-2 border rounded-md focus:outline-none focus:border-blue-500"
-            placeholder="Enter your email"
-            required
-          />
-        </div>
-
-        <div className="mb-6">
-          <label
-            className="block text-blue-700 font-semibold mb-2"
-            htmlFor="password"
-          >
-            Password
-          </label>
-          <input
-            type="password"
-            id="password"
-            value={password}
-            onChange={(e) => setPassword(e.target.value)}
-            className="w-full px-4 py-2 border rounded-md focus:outline-none focus:border-blue-500"
-            placeholder="Enter your password"
-            required
-          />
-        </div>
-
-        <button
-          type="submit"
-          className="w-full bg-blue-700 text-white py-2 rounded-md hover:bg-blue-800 transition"
-        >
-          Sign Up
-        </button>
-      </form>
-
-      {/* Redirect to Home Page for Login */}
-      <Link href="/" className="mt-4 text-blue-600 hover:underline">
-        Already have an account? Log In
-      </Link>
+        <p className="mt-6 text-center text-sm text-gray-600">
+          Already have an account?{" "}
+          <Link href="/login" className="text-blue-600 hover:underline">
+            Log In
+          </Link>
+        </p>
+      </div>
     </div>
   );
 }
