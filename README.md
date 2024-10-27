@@ -1,4 +1,4 @@
-#ClearBill - AI Optimized Billing Optimization
+# ClearBill - AI Driven Billing Optimization
 
 
 
@@ -25,9 +25,11 @@ The system aids government agencies by analyzing patterns in billing data to fla
 
 Overall, our AI-driven billing optimization system offers a multi-faceted solution with clear benefits for all stakeholders. It enables a streamlined, transparent, and fair billing experience that empowers patients, optimizes healthcare operations, and strengthens government oversight in the fight against healthcare fraud.
 
-
+## ClearBill Overview
 [![ClearBill Overview](https://img.youtube.com/vi/_SWW0mGRUPk/0.jpg)](https://www.youtube.com/watch?v=_SWW0mGRUPk)
 
+
+## ClearBill Demo
 [![ClearBill Demo](https://img.youtube.com/vi/FD8rSAFCbw0/0.jpg)](https://www.youtube.com/watch?v=FD8rSAFCbw0)
 
 
