@@ -14,7 +14,7 @@ export default function Analysis() {
   return (
     <div className="flex flex-col items-center justify-center min-h-screen p-6 bg-gradient-to-b from-blue-50 to-blue-200">
       <h2 className="text-4xl font-bold mb-8 text-blue-800">
-        SmartBill Analysis
+        ClearBill Analysis
       </h2>
 
       <FileUpload onAnalyze={handleAnalysis} />
