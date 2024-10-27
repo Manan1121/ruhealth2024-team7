@@ -13,20 +13,48 @@ export default function Signup() {
 
   const handleSignup = (e) => {
     e.preventDefault();
-    // Perform signup logic here (e.g., API call)
-
-    // Redirect to the Analysis page
     router.push("/analysis");
   };
 
   return (
-<div
-  className="flex items-center justify-center min-h-screen px-4 sm:px-0"
-  style={{
-    background: `radial-gradient(circle, rgba(173,216,230,1) 0%, rgba(210,210,210,1) 50%, rgba(0,0,139,1) 100%)`,
-  }}
->
-      <div className="bg-white shadow-xl rounded-2xl p-8 w-full max-w-lg border-t-4 border-blue-600">
+    <div
+      className="flex items-center justify-center min-h-screen px-4 sm:px-0 relative overflow-hidden"
+      style={{
+        background: `linear-gradient(
+          120deg,
+          rgba(173, 216, 230, 0.2),
+          rgba(240, 248, 255, 0.4) 30%,
+          rgba(100, 149, 237, 0.3) 60%,
+          rgba(0, 0, 128, 0.2) 100%
+        )`,
+      }}
+    >
+      {/* Wavy Gradient Layers */}
+      <div
+        className="absolute top-0 left-0 w-full h-full"
+        style={{
+          background: `radial-gradient(
+            circle at top right,
+            rgba(173, 216, 230, 0.1),
+            transparent 70%
+          )`,
+          clipPath: "polygon(0 0, 100% 0, 100% 80%, 0 60%)",
+        }}
+      ></div>
+      <div
+        className="absolute bottom-0 left-0 w-full h-full"
+        style={{
+          background: `radial-gradient(
+            circle at bottom left,
+            rgba(70, 130, 180, 0.2),
+            transparent 70%
+          )`,
+          clipPath: "polygon(0 20%, 100% 40%, 100% 100%, 0 100%)",
+        }}
+      ></div>
+
+      {/* Signup Form */}
+      <div className="bg-white shadow-xl rounded-3xl p-8 w-full max-w-lg border-t-4 border-blue-600 z-10">
         <h2 className="text-4xl font-extrabold mb-8 text-blue-800 text-center">
           Create Your Account
         </h2>
@@ -96,7 +124,7 @@ export default function Signup() {
 
         <p className="mt-6 text-center text-sm text-gray-600">
           Already have an account?{" "}
-          <Link href="/login" className="text-blue-600 hover:underline">
+          <Link href="/" className="text-blue-600 hover:underline">
             Log In
           </Link>
         </p>

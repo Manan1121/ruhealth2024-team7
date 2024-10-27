@@ -32,12 +32,13 @@ export default function Home() {
         <div className="text-5xl font-extrabold mb-4">
           <h1 className="font-poppins">ClearBill</h1>
           <h2 className="mt-2 text-3xl text-blue-200">
-            Cutting through the haze of healthcare billing.
+            Healthcare billing can be foggy—ClearBill cuts through the haze.
           </h2>
         </div>
         <p className="text-lg max-w-lg mb-8 text-blue-200">
-          ClearBill simplifies complex medical bills, streamlines hospital
-          billing, and helps prevent fraud—all at your fingertips.
+          ClearBill sheds light on medical bills, helping patients understand
+          charges, streamlining hospital billing, and aiding fraud detection.
+          Transparency in healthcare billing is just a click away.
         </p>
         <h2 className="text-xl font-semibold mb-6">Key Features</h2>
 
@@ -47,24 +48,29 @@ export default function Home() {
               title: "Patient-Centric Bill Summarization",
               description:
                 "Translates complex codes into plain language, so you know exactly what you're being charged for.",
+              bgColor: "bg-blue-600",
             },
             {
-              title: "Cost grade, see if youre being overcharged",
+              title: "Cost Grade: Overcharge Detection",
               description:
                 "Identifies billing errors before they reach patients, minimizing costly corrections.",
+              bgColor: "bg-blue-500",
             },
             {
               title: "Fraud Prevention",
               description:
-                "Detects unusual billing patterns to alert agencies, saving billions.",
+                "Alerts government agencies to unusual billing patterns, potentially saving billions.",
+              bgColor: "bg-blue-400",
             },
           ].map((feature, index) => (
             <div
               key={index}
-              className={`bg-blue-${
-                700 - index * 100
-              } p-5 rounded-lg shadow-lg transform animate-pulse-slow transition-all duration-1000 ${
-                isLoaded ? "opacity-100 translate-y-0" : "opacity-0 translate-y-10"
+              className={`${
+                feature.bgColor
+              } text-white p-5 rounded-lg shadow-lg transform animate-pulse-slow transition-all duration-1000 ${
+                isLoaded
+                  ? "opacity-100 translate-y-0"
+                  : "opacity-0 translate-y-10"
               } delay-${index * 1500}`}
             >
               <p className="font-semibold">{feature.title}</p>
@@ -80,7 +86,10 @@ export default function Home() {
           isLoaded ? "opacity-100 translate-x-0" : "opacity-0 translate-x-10"
         } delay-4500`}
       >
-        <div className="bg-white text-black shadow-2xl rounded-2xl p-8 w-full max-w-md border-t-4 border-blue-600">
+        <div
+          className="bg-white text-black shadow-2xl rounded-lg p-8 w-full max-w-md border-t-4 border-blue-600"
+          style={{ borderRadius: "0.5rem" }}
+        >
           <h2 className="text-2xl font-bold mb-6 text-blue-800 text-center">
             Log In
           </h2>
@@ -132,7 +141,7 @@ export default function Home() {
           <div className="text-center mt-4">
             <Link
               href="/signup"
-              className="text-gray-500 underline hover:text-gray-300"
+              className="text-gray-400 underline hover:text-gray-500 transition-colors duration-200"
             >
               Don't have an account? Sign Up
             </Link>
