@@ -2,7 +2,7 @@
 import "./globals.css";
 
 export const metadata = {
-  title: "SmartBill: AI Powered Bill Analyzer",
+  title: "CleartBill: AI Powered Bill Analyzer",
   description: "An AI-powered tool for billing transparency",
 };
 

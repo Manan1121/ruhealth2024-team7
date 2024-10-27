@@ -89,7 +89,8 @@ export default function Signup() {
         </button>
       </form>
 
-      <Link href="/login" className="mt-4 text-blue-600 hover:underline">
+      {/* Redirect to Home Page for Login */}
+      <Link href="/" className="mt-4 text-blue-600 hover:underline">
         Already have an account? Log In
       </Link>
     </div>
